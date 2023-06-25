@@ -1,10 +1,9 @@
-package com.example.demo.utils;
+package com.open.library.utils;
 
 import cn.hutool.core.date.DateUtil;
-import cn.hutool.json.JSONUtil;
 
-import com.example.demo.entity.User;
-import com.example.demo.mapper.UserMapper;
+import com.open.library.entity.User;
+import com.open.library.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -1,14 +1,13 @@
-package com.example.demo.controller;
+package com.open.library.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.demo.commom.Result;
-import com.example.demo.entity.BookWithUser;
-import com.example.demo.entity.BookWithUser;
-import com.example.demo.mapper.BookWithUserMapper;
+import com.open.library.commom.Result;
+import com.open.library.entity.BookWithUser;
+import com.open.library.mapper.BookWithUserMapper;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

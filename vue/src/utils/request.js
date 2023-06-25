@@ -11,14 +11,20 @@ const request = axios.create({
 // 比如统一加token，对请求参数统一加密
 request.interceptors.request.use(config => {
     config.headers['Content-Type'] = 'application/json;charset=utf-8';
+    // 登陆和注册无需加token
+    if (config.url === 'user/login' || config.url === 'user/register') {
+        return config
+    }
 
-    // config.headers['token'] = user.token;  // 设置请求头
-    //取出sessionStorage里面缓存的用户信息
     let userJson = sessionStorage.getItem("user")
-    if(!userJson)
-    {
+    if (userJson) {
+        // 添加token
+        config.headers['token'] = JSON.parse(userJson).token;
+    } else {
+        // 未登陆跳转到登录页
         router.push("/login")
     }
+
     return config
 }, error => {
     return Promise.reject(error)
@@ -37,6 +43,11 @@ request.interceptors.response.use(
         if (typeof res === 'string') {
             res = res ? JSON.parse(res) : res
         }
+        // 发现未认证返回到登录页
+        if (res.code === '403') {
+            router.push("/login")
+        }
+
         return res;
     },
     error => {

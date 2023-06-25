@@ -1,15 +1,14 @@
-package com.example.demo.controller;
+package com.open.library.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.example.demo.LoginUser;
-import com.example.demo.commom.Result;
-import com.example.demo.entity.Book;
-import com.example.demo.entity.LendRecord;
-import com.example.demo.entity.User;
-import com.example.demo.mapper.BookMapper;
-import com.example.demo.mapper.LendRecordMapper;
-import com.example.demo.mapper.UserMapper;
+import com.open.library.LoginUser;
+import com.open.library.commom.Result;
+import com.open.library.entity.Book;
+import com.open.library.entity.LendRecord;
+import com.open.library.entity.User;
+import com.open.library.mapper.BookMapper;
+import com.open.library.mapper.LendRecordMapper;
+import com.open.library.mapper.UserMapper;
 
 import org.springframework.web.bind.annotation.*;
 

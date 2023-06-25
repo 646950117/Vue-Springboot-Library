@@ -1,13 +1,10 @@
-package com.example.demo.entity;
+package com.open.library.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import org.apache.ibatis.annotations.Update;
-
-import java.util.Map;
 
 @TableName("user")
 @Data

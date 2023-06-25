@@ -1,7 +1,7 @@
-package com.example.demo.mapper;
+package com.open.library.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.demo.entity.LendRecord;
+import com.open.library.entity.LendRecord;
 
 
 public interface LendRecordMapper extends BaseMapper<LendRecord> {

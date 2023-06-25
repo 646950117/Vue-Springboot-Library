@@ -1,4 +1,4 @@
-package com.example.demo.commom;
+package com.open.library.commom;
 
 public class Result<T> {
     private String code;

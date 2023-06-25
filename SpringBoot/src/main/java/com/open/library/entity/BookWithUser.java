@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.open.library.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.open.library;
 public class LoginUser {
     private static int visitCount = 0;
     public static void addVisitCount() {

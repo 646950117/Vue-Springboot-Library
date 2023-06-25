@@ -1,4 +1,4 @@
-package com.example.demo.commom;
+package com.open.library.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
@@ -11,8 +11,7 @@ import org.springframework.context.annotation.Configuration;
  *  mybatis-plus 分页插件
  */
 @Configuration
-@MapperScan("com.example.demo.mapper")
-@MapperScan("com.example.demo.service")
+@MapperScan("com.open.library.mapper")
 public class MybatisPlusConfig {
 
     /**
