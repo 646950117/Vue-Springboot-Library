@@ -45,16 +45,23 @@ public class BookController {
                               @RequestParam(defaultValue = "10") Integer pageSize,
                               @RequestParam(defaultValue = "") String search1,
                               @RequestParam(defaultValue = "") String search2,
-                              @RequestParam(defaultValue = "") String search3){
+                              @RequestParam(defaultValue = "") String search3,
+                              @RequestParam(defaultValue = "") String search4){
         LambdaQueryWrapper<Book> wrappers = Wrappers.<Book>lambdaQuery();
         if(StringUtils.isNotBlank(search1)){
             wrappers.like(Book::getIsbn,search1);
         }
+        // 书名
         if(StringUtils.isNotBlank(search2)){
             wrappers.like(Book::getName,search2);
         }
+        // 作者
         if(StringUtils.isNotBlank(search3)){
             wrappers.like(Book::getAuthor,search3);
+        }
+        // 出版社
+        if(StringUtils.isNotBlank(search4)){
+            wrappers.like(Book::getPublisher,search4);
         }
         Page<Book> BookPage =BookMapper.selectPage(new Page<>(pageNum,pageSize), wrappers);
         return Result.success(BookPage);

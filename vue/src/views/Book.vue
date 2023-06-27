@@ -19,6 +19,11 @@
             <template #prefix><el-icon class="el-input__icon"><search /></el-icon></template>
           </el-input>
         </el-form-item >
+        <el-form-item label="出版社" >
+          <el-input v-model="search4" placeholder="请输入出版社"  clearable>
+            <template #prefix><el-icon class="el-input__icon"><search /></el-icon></template>
+          </el-input>
+        </el-form-item >
         <el-form-item>
           <el-button type="primary" style="margin-left: 1%" @click="load" size="mini" >
             <svg-icon iconClass="search"/>查询</el-button>
@@ -231,6 +236,7 @@ export default {
           search1: this.search1,
           search2: this.search2,
           search3: this.search3,
+          search4: this.search4,
         }
       }).then(res =>{
         console.log(res)
@@ -246,6 +252,7 @@ export default {
             search1: "",
             search2: "",
             search3: this.user.id,
+            search4: this.search4,
           }
         }).then(res =>{
           console.log(res)
@@ -274,6 +281,7 @@ export default {
       this.search1 = ""
       this.search2 = ""
       this.search3 = ""
+      this.search4 = ""
       this.load()
     },
 
@@ -487,6 +495,7 @@ export default {
       search1:'',
       search2:'',
       search3:'',
+      search4:'',
       total:10,
       currentPage:1,
       pageSize: 10,
